@@ -1,0 +1,457 @@
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
+    background: #f5f7fb;
+    color: #172033;
+    font: 15px/1.45 system-ui, -apple-system, Segoe UI, Roboto, sans-serif
+}
+
+.app-shell {
+    max-width: 1200px;
+    margin: auto;
+    padding: 24px
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 24px
+}
+
+h1,
+h2,
+h3,
+p {
+    margin: 0
+}
+
+h1 {
+    font-size: 27px;
+    letter-spacing: -.7px
+}
+
+header p,
+.section-title p,
+footer,
+.danger-zone p {
+    color: #667085
+}
+
+.header-actions,
+.form-actions,
+.inline-field {
+    display: flex;
+    gap: 9px;
+    align-items: center
+}
+
+.pill {
+    background: #e8eefc;
+    color: #244398;
+    border-radius: 999px;
+    padding: 6px 10px;
+    font-size: 12px;
+    font-weight: 700
+}
+
+button,
+.file-label {
+    border: 0;
+    border-radius: 8px;
+    padding: 10px 14px;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 650
+}
+
+.primary {
+    background: #315bdc;
+    color: #fff
+}
+
+.primary:hover {
+    background: #2348b9
+}
+
+.secondary {
+    background: #fff;
+    border: 1px solid #d8deea;
+    color: #344054
+}
+
+.danger {
+    background: #fff0f0;
+    color: #b42318;
+    border: 1px solid #fecaca
+}
+
+.text-button {
+    background: transparent;
+    color: #315bdc;
+    padding: 8px
+}
+
+.file-label input {
+    display: none
+}
+
+nav {
+    display: flex;
+    border-bottom: 1px solid #dfe4ee;
+    margin-bottom: 26px;
+    gap: 8px
+}
+
+.nav {
+    border-radius: 8px 8px 0 0;
+    background: transparent;
+    color: #667085
+}
+
+.nav.active {
+    background: #eaf0ff;
+    color: #244398
+}
+
+.view {
+    display: none
+}
+
+.view.active {
+    display: block
+}
+
+.section-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 16px;
+    margin: 22px 0 12px
+}
+
+h2 {
+    font-size: 20px
+}
+
+h3 {
+    font-size: 16px;
+    margin-bottom: 14px
+}
+
+.card {
+    background: #fff;
+    border: 1px solid #e4e8f0;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 5px #18223008
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 17px
+}
+
+.wide {
+    grid-column: span 3
+}
+
+label {
+    font-weight: 650;
+    color: #344054;
+    display: grid;
+    gap: 7px
+}
+
+input,
+select {
+    width: 100%;
+    min-height: 42px;
+    border: 1px solid #cfd6e4;
+    border-radius: 8px;
+    padding: 9px 10px;
+    font: inherit;
+    color: #172033;
+    background: #fff
+}
+
+input:focus,
+select:focus {
+    outline: 3px solid #dbe6ff;
+    border-color: #315bdc
+}
+
+.money-input {
+    display: flex;
+    align-items: center;
+    border: 1px solid #cfd6e4;
+    border-radius: 8px
+}
+
+.money-input span {
+    padding-left: 12px;
+    color: #667085
+}
+
+.money-input input {
+    border: 0
+}
+
+.icon-button {
+    padding: 7px 12px;
+    font-size: 21px;
+    background: #eaf0ff;
+    color: #244398
+}
+
+.form-actions {
+    justify-content: flex-end
+}
+
+.table-wrap {
+    overflow: auto;
+    padding: 0
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 750px
+}
+
+th,
+td {
+    padding: 13px 16px;
+    border-bottom: 1px solid #edf0f5;
+    text-align: left
+}
+
+th {
+    font-size: 12px;
+    color: #667085;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    background: #fafbfc
+}
+
+.number {
+    text-align: right
+}
+
+.amount-credit {
+    color: #067647;
+    font-weight: 750
+}
+
+.amount-debit {
+    color: #b42318;
+    font-weight: 750
+}
+
+.badge {
+    border-radius: 999px;
+    padding: 3px 8px;
+    font-weight: 700;
+    font-size: 12px
+}
+
+.badge.credit {
+    background: #e7f8ef;
+    color: #067647
+}
+
+.badge.debit {
+    background: #fff0f0;
+    color: #b42318
+}
+
+.row-action {
+    padding: 5px 9px;
+    background: #fff0f0;
+    color: #b42318
+}
+
+.report-filters {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr) auto;
+    align-items: end;
+    gap: 14px
+}
+
+.metrics {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    margin: 18px 0
+}
+
+.metric {
+    background: #fff;
+    border: 1px solid #e4e8f0;
+    border-radius: 12px;
+    padding: 16px
+}
+
+.metric span {
+    display: block;
+    color: #667085;
+    font-size: 13px
+}
+
+.metric strong {
+    font-size: 23px
+}
+
+.metric.credit strong {
+    color: #067647
+}
+
+.metric.debit strong {
+    color: #b42318
+}
+
+.manage-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px
+}
+
+.simple-add {
+    display: flex;
+    gap: 9px;
+    margin-bottom: 14px
+}
+
+.chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px
+}
+
+.chip {
+    background: #f0f3f9;
+    border-radius: 999px;
+    padding: 7px 9px 7px 12px;
+    display: flex;
+    gap: 8px;
+    align-items: center
+}
+
+.chip button {
+    background: transparent;
+    color: #667085;
+    padding: 0;
+    font-size: 17px
+}
+
+.danger-zone {
+    margin-top: 18px
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background: #10182880;
+    display: grid;
+    place-items: center;
+    padding: 20px
+}
+
+.modal[hidden] {
+  display: none !important;
+}
+
+.modal-box {
+    background: #fff;
+    width: min(400px, 100%);
+    border-radius: 12px;
+    padding: 20px
+}
+
+.modal-box form {
+    display: grid;
+    gap: 16px
+}
+
+#toast {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    background: #172033;
+    color: #fff;
+    border-radius: 8px;
+    padding: 10px 15px;
+    transition: .25s;
+    z-index: 5
+}
+
+#toast.show {
+    transform: translateX(-50%) translateY(0)
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 13px
+}
+
+@media(max-width:800px) {
+    .app-shell {
+        padding: 14px
+    }
+
+    header {
+        align-items: flex-start;
+        flex-direction: column
+    }
+
+    .form-grid,
+    .report-filters {
+        grid-template-columns: 1fr 1fr
+    }
+
+    .wide {
+        grid-column: span 2
+    }
+
+    .metrics {
+        grid-template-columns: 1fr 1fr
+    }
+
+    .report-filters>div {
+        grid-column: span 2
+    }
+
+    .manage-grid {
+        grid-template-columns: 1fr
+    }
+}
+
+@media(max-width:500px) {
+
+    .form-grid,
+    .report-filters,
+    .metrics {
+        grid-template-columns: 1fr
+    }
+
+    .wide,
+    .report-filters>div {
+        grid-column: span 1
+    }
+
+    .header-actions {
+        flex-wrap: wrap
+    }
+
+    .section-title {
+        align-items: flex-start;
+        flex-direction: column
+    }
+}
